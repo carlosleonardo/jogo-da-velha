@@ -1,1 +1,4 @@
-.linha {}
+.linha {
+  display: flex;
+  flex-direction: row;
+}
