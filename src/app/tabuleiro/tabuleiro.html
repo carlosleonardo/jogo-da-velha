@@ -1,15 +1,24 @@
 <div class="linha">
-  <app-celula/>
-  <app-celula/>
-  <app-celula/>
+  <app-celula [coluna]="0" [linha]="0"/>
+  <app-celula [coluna]="1" [linha]="0"/>
+  <app-celula [coluna]="2" [linha]="0"/>
 </div>
 <div class="linha">
-  <app-celula/>
-  <app-celula/>
-  <app-celula/>
+  <app-celula [coluna]="0" [linha]="1"/>
+  <app-celula [coluna]="1" [linha]="1"/>
+  <app-celula [coluna]="2" [linha]="1"/>
 </div>
 <div class="linha">
-  <app-celula/>
-  <app-celula/>
-  <app-celula/>
+  <app-celula [coluna]="0" [linha]="2"/>
+  <app-celula [coluna]="1" [linha]="2"/>
+  <app-celula [coluna]="2" [linha]="2"/>
+</div>
+<div class="linha">
+  @if (jogo?.vencedor) {
+    <p>Vencedor: {{ jogo?.vencedor }}</p>
+  } @else if (jogo?.empate) {
+    <p>Empate!</p>
+  } @else {
+    <p>Próximo jogador: {{ jogo?.jogadorAtual }}</p>
+  }
 </div>
