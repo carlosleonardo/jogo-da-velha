@@ -14,11 +14,14 @@
   <app-celula [coluna]="2" [linha]="2"/>
 </div>
 <div class="linha">
-  @if (jogo?.vencedor) {
-    <p>Vencedor: {{ jogo?.vencedor }}</p>
-  } @else if (jogo?.empate) {
+  @if (jogo.vencedor) {
+    <p>Vencedor: {{ jogo.vencedor }}</p>
+  } @else if (jogo.empate) {
     <p>Empate!</p>
   } @else {
-    <p>Próximo jogador: {{ jogo?.jogadorAtual }}</p>
+    <p>Próximo jogador: {{ jogo.jogadorAtual }}</p>
+  }
+  @if (jogo.vencedor || jogo.empate) {
+    <button (click)="reiniciarJogo()">Reiniciar Jogo</button>
   }
 </div>

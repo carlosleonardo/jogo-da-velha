@@ -12,10 +12,11 @@ import {ServicoJogo} from '../../servico-jogo';
 })
 export class Tabuleiro implements OnInit {
   ngOnInit(): void {
-    this.jogo.reiniciarJogo();
+    this.reiniciarJogo();
   }
   protected jogo = inject(ServicoJogo);
-  marcarCelula(linha: number, coluna: number): void {
-    this.jogo.fazerJogada(linha, coluna);
+
+  reiniciarJogo() {
+    this.jogo.reiniciarJogo();
   }
 }
